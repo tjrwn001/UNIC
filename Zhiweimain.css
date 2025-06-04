@@ -1,0 +1,104 @@
+/* zhiweimain.css */
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+  }
+  
+  header {
+    background-color: #f4f4f4;
+    text-align: center;
+    padding: 30px 20px 10px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2em;
+    font-weight: bold;
+  }
+  
+  header p {
+    margin: 5px 0 15px;
+    font-size: 1.1em;
+    color: #666;
+  }
+  
+  nav {
+    margin-bottom: 10px;
+  }
+  
+  nav a {
+    margin: 0 15px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  .intro-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    background-color: white;
+  }
+  
+  .profile {
+    text-align: center;
+    margin-right: 40px;
+  }
+  
+  .profile img {
+    width: 150px;
+    border-radius: 8px;
+  }
+  
+  .profile a {
+    color: #0056b3;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .bio {
+    max-width: 600px;
+  }
+  
+  .openings {
+    background-color: #eee;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    text-align: left;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
