@@ -3,31 +3,79 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Research Area - UNIC</title>
+  <title>UNIC</title>
   <link rel="stylesheet" href="Zhiweimain.css" />
 </head>
 <body>
   <header>
     <h1>UNIC</h1>
-    <p>Membrane Separation Technology</p>
+    <br>
+    <p>Ultrathin Nanofilm of Interconnected Cavity</p>
+    <br>
     <nav>
         <a href="index.html">Home</a>
       <a href="Zhiweiabout.html"> Research Area</a>
       <a href="Zhiweipeople.html">People</a>
       <a href="Zhiweipublication.html">Publications</a>
-      <a href="ZhiweiAwards.html">Awards & Highlights</a>
+      <a href="ZhiweiAwards.html">News</a>
+      <a href="Zhiweiopportunity.html">Opportunities</a>
       <a href="Zhiweicontact.html"> Contacts</a>
     </nav>
   </header>
 
   <!-- Inside Zhiweipublication.html -->
-<main class="intro-section">
-    <div class="bio">
+  <main class="page-content">
+    <section class="content-area">
       <h2>Research Area</h2>
-        <p>Our research covers cavity design, membrane fabrication, and their applications in various sectors such as energy, environment, and chemicals.</p>
-        <img src="Researcharea.png" alt="Research Overview Diagram" style="max-width: 100%; height: auto; margin-top: 20px; border: 1px solid #ccc; border-radius: 8px;">
-    </div>
+      <p>Our research covers cavity design... <b>Click below to find out more!</b></p>
+      <div class="research-layout">
+        <div class="research-image">
+            <img src="Researcharea.png" usemap="#researchMap" alt="Research Diagram" class="responsive-img">
+
+            <map name="researchMap">
+                <area shape="rect" coords="0,0,500,600" alt="Cavity Design" data-section="cavitydesign">
+                <area shape="rect" coords="500,0,1000,600" alt="Membrane Fabrication" data-section="membranefabrication">
+                <area shape="rect" coords="1000,0,1500,600" alt="Wide Applications" data-section="wideapplications">
+              </map>              
+            
+        </div>
+        <div class="research-description">
+          <h3>Understanding Our Research Approach</h3>
+          <p>
+            Our research integrates cavity design, membrane fabrication, and application strategies to tackle critical energy and environmental challenges. The image illustrates the full pipeline from macrocyclic structures to membrane deployment and wide-ranging industrial applications.
+          </p>
+          <p>
+            We engineer highly selective membranes using interfacial polymerization, enabling breakthroughs in pharmaceutical processing, biofuel production, catalysis, and separation technologies.
+          </p>
+          <div id="cavitydesign" class="section-text hidden">
+            <h3>Cavity Design</h3>
+            <p>This section involves the development of macrocyclic architectures such as porous cages and covalent frameworks that facilitate precise molecular sieving.</p>
+          </div>
+          
+          <div id="membranefabrication" class="section-text hidden">
+            <h3>Membrane Fabrication</h3>
+            <p>Membrane fabrication focuses on creating selective membranes using interfacial polymerization, nanofilms, and aligned channel structures.</p>
+          </div>
+          
+          <div id="wideapplications" class="section-text hidden">
+            <h3>Wide Applications</h3>
+            <p>These membranes are used in fields like biofuel production, pharmaceuticals, lithium enrichment, and chemical recycling.</p>
+          </div>
+          
+          
+        </div>
+      </div>
+      
+    </section>
   </main>
+
+  <footer>
+    <p>&copy; 2025 UNIC Research Group</p>
+  </footer>
   
+  <script src="Zhiweimain.js"></script>
+
+
 </body>
+
 </html>
