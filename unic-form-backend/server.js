@@ -59,7 +59,7 @@ app.post('/apply', upload.fields([
 
   const mailOptions = {
     from: '"UNIC Website" <h.seok2@gmail.com>',
-    to: 'h.seok2@gmail.com',
+    to: 'jzwhire@gmail.com',
     subject: `New Application from ${fullName}`,
     text: `Name: ${fullName}\nEmail: ${email}\nResearch Interests: ${research}`,
     attachments
