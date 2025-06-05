@@ -18,7 +18,7 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 // Route to handle form submission
-app.post('/submit', upload.fields([
+app.post('/apply', upload.fields([...]), async (req, res) => {
   { name: 'cv' }, 
   { name: 'cover-letter' }, 
   { name: 'pubs' }
