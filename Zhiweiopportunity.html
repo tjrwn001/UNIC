@@ -30,30 +30,33 @@
     <section class="application-form">
       <h2>Now Hiring: PhD Students and Postdoctoral Researchers</h2>
       
-      <form action="https://formspree.io/f/xyzjzvpz" method="POST" enctype="multipart/form-data">
-        <label for="full-name">Full Name </label>
-        <input type="text" id="full-name" name="full-name" required>
+      <form id="applicationForm" enctype="multipart/form-data">
+        <label for="full-name">Full Name *</label>
+        <input type="text" id="full-name" name="fullName" required>
       
-        <label for="email">Email Address </label>
+        <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required>
       
-        <label for="research">Research Interests </label>
-        <textarea id="research" name="research" rows="4" required placeholder="Briefly describe your research interests..."></textarea>
+        <label for="research">Research Interests</label>
+        <textarea id="research" name="research" rows="4" required></textarea>
       
-        <label for="cv">Upload CV </label>
+        <label for="cv">Upload CV</label>
         <input type="file" id="cv" name="cv" required>
       
-        <label for="cover-letter">Upload Cover Letter </label>
+        <label for="cover-letter">Upload Cover Letter</label>
         <input type="file" id="cover-letter" name="cover-letter" required>
       
         <label for="pubs">Upload Publication List</label>
         <input type="file" id="pubs" name="pubs">
       
-        <!-- Optional: Redirect to a thank-you page after submission -->
-        <input type="hidden" name="_next" value="thankyou.html">
-      
         <button type="submit">Submit Application</button>
       </form>
+      
+      <div id="thankYouMessage" style="display:none; text-align:center; margin-top:40px;">
+        <h3>Thank you for your application!</h3>
+        <p>We’ve received your submission.</p>
+        <button onclick="goBack()">Go Back</button>
+      </div>
       
     </section>
   </main>
@@ -61,5 +64,7 @@
   <footer>
     <p>&copy; 2025 UNIC Research Group</p>
   </footer>
+
+  <script src="Zhiweimain.js"></script>
 </body>
 </html>

@@ -450,6 +450,25 @@ html, body {
     display: block;
     border-radius: 4px;
   }
+
+
+  #thankYouMessage h3 {
+    color: #007bff;
+  }
+  
+  #thankYouMessage button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  #thankYouMessage button:hover {
+    background-color: #0056b3;
+  }
+  
   
 
 

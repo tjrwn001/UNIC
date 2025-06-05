@@ -22,3 +22,38 @@ function sayHello() {
     });
   });
   
+
+  // form-handler.js
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('applicationForm');
+    const thankYou = document.getElementById('thankYouMessage');
+  
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+  
+      const formData = new FormData(form);
+  
+      try {
+        const res = await fetch('https://unic.onrender.com/apply', {
+          method: 'POST',
+          body: formData
+        });
+  
+        if (res.ok) {
+          form.style.display = 'none';
+          thankYou.style.display = 'block';
+        } else {
+          alert('There was an error submitting the form.');
+        }
+      } catch (err) {
+        alert('Failed to submit. Please try again.');
+      }
+    });
+  
+    window.goBack = function () {
+      thankYou.style.display = 'none';
+      form.style.display = 'block';
+      form.reset();
+    };
+  });
+  
