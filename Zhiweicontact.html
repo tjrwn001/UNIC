@@ -3,47 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>People - UNIC</title>
+  <title>Contact - UNIC</title>
   <link rel="stylesheet" href="Zhiweimain.css" />
 </head>
 <body>
-  <header>
-    <h1>UNIC</h1>
-    <br>
-    <p>Ultrathin Nanofilm of Interconnected Cavity</p>
-    <br>
-    <nav>
+  <div class="page-wrapper">
+    <header>
+      <h1>UNIC</h1>
+      <p>Ultrathin Nanofilm of Interconnected Cavity</p>
+      <nav>
         <a href="index.html">Home</a>
-      <a href="Zhiweiabout.html"> Research Area</a>
-      <a href="Zhiweipeople.html">People</a>
-      <a href="Zhiweipublication.html">Publications</a>
-      <a href="ZhiweiAwards.html">News</a>
-      <a href="Zhiweiopportunity.html">Opportunities</a>
-      <a href="Zhiweicontact.html"> Contacts</a>
-    </nav>
-  </header>
+        <a href="Zhiweiabout.html">Research Area</a>
+        <a href="Zhiweipeople.html">People</a>
+        <a href="Zhiweipublication.html">Publications</a>
+        <a href="ZhiweiAwards.html">News</a>
+        <a href="Zhiweiopportunity.html">Opportunities</a>
+        <a href="Zhiweicontact.html">Contacts</a>
+      </nav>
+    </header>
 
-  <main class="intro-section">
-    <div class="bio">
-      <h2>Contact Us</h2>
-      <form action="#" method="POST">
-        <label for="name">Name:</label><br/>
-        <input type="text" id="name" name="name" required><br/><br/>
+    <main>
+      <section class="application-form">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/xyzjzvpz" method="POST">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required>
 
-        <label for="email">Email:</label><br/>
-        <input type="email" id="email" name="email" required><br/><br/>
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required>
 
-        <label for="message">Message:</label><br/>
-        <textarea id="message" name="message" rows="5" required></textarea><br/><br/>
+          <label for="message">Message *</label>
+          <textarea id="message" name="message" rows="5" required></textarea>
 
-        <button type="submit">Submit</button>
-      </form>
-    </div>
-  </main>
+          <button type="submit">Send Message</button>
+        </form>
+      </section>
+    </main>
 
-  <footer>
-    <p>&copy; 2025 UNIC Research Group</p>
-  </footer>
-  
+    <footer>
+      <p>&copy; 2025 UNIC Research Group</p>
+    </footer>
+  </div>
 </body>
 </html>
