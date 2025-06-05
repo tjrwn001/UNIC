@@ -3,34 +3,34 @@ const multer = require('multer');
 const nodemailer = require('nodemailer');
 const cors = require('cors');
 const path = require('path');
+
 const app = express();
 const PORT = 3000;
 
 // Middleware
 app.use(cors({
-  origin: 'https://www.uniclaboratory.com'  // your live site URL
+  origin: 'https://www.uniclaboratory.com'
 }));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Set up file storage with Multer
+// Multer setup for file uploads
 const storage = multer.memoryStorage();
-const upload = multer({ storage: storage });
+const upload = multer({ storage });
 
-// Route to handle form submission
-app.post('/apply', upload.fields([...]), async (req, res) => {
-  { name: 'cv' }, 
-  { name: 'cover-letter' }, 
+// Route to handle form submissions
+app.post('/apply', upload.fields([
+  { name: 'cv' },
+  { name: 'cover-letter' },
   { name: 'pubs' }
 ]), async (req, res) => {
   const { fullName, email, research } = req.body;
 
-  // Set up Nodemailer
   const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-      user: 'h.seok2@gmail.com',          // your Gmail address
-      pass: 'zrrqdqjeobvvtovc'      // paste your app password here (no spaces)
+      user: 'h.seok2@gmail.com',
+      pass: 'zrrqdqjeobvvtovc'
     }
   });
 
@@ -58,11 +58,11 @@ app.post('/apply', upload.fields([...]), async (req, res) => {
   }
 
   const mailOptions = {
-    from: `"UNIC Website" <h.seok2@gmail.com>`,
-    to: 'h.seok2@gmail.com', // where the submission should go
+    from: '"UNIC Website" <h.seok2@gmail.com>',
+    to: 'h.seok2@gmail.com',
     subject: `New Application from ${fullName}`,
     text: `Name: ${fullName}\nEmail: ${email}\nResearch Interests: ${research}`,
-    attachments: attachments
+    attachments
   };
 
   try {
@@ -74,6 +74,7 @@ app.post('/apply', upload.fields([...]), async (req, res) => {
   }
 });
 
+// Start the server
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
