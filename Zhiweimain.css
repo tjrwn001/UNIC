@@ -509,8 +509,24 @@ html, body {
     background-color: #0056b3;
   }
   
-  
+  .contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+    min-height: 80vh;
+  }
 
+  .contact-container {
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+  }
+  
+  .contact-container h2 {
+    margin-bottom: 30px;
+    font-size: 28px;
+  }
 
 
 
