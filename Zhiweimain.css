@@ -228,7 +228,7 @@ html, body {
     margin: 30px auto;
   }
 
-  .research-layout {
+  /*.research-layout {
     display: flex;
     flex-wrap: wrap; 
     justify-content: space-between;
@@ -242,8 +242,8 @@ html, body {
 
 
   .research-image {
-    flex: 0 0 100%;        /* ✅ Wider image space */
-    min-width:1000px;     /* ✅ Force it to not shrink too small */
+    flex: 0 0 100%;       
+    min-width:1000px;     
   }
   
   .research-image img {
@@ -263,6 +263,46 @@ html, body {
     line-height: 1.6;
     padding-top: 10px;
   }
+  */
+
+  .centered-image {
+    text-align: center;
+    margin: 40px 0;
+  }
+  
+  .centered-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: none;         /* Removes border */
+    outline: none;        /* Removes focus outline */
+    box-shadow: none;     /* In case a box-shadow is applied */
+  }
+  
+  
+  .about-description {
+    max-width: 1000px;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .section-text {
+    margin-top: 10px;
+    font-size: 18px;
+    line-height: 1.6;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 0.5s ease, max-height 0.5s ease;
+  }
+  
+  .section-text.visible {
+    opacity: 1;
+    max-height: 300px; /* adjust as needed */
+  }
+  
   
 
   .publication-bio {
