@@ -74,7 +74,37 @@ app.post('/apply', upload.fields([
   }
 });
 
-// Start the server
+// ...your existing /apply route above...
+
+// ⬇️ Paste this block right before app.listen()
+app.post('/contact', express.urlencoded({ extended: true }), async (req, res) => {
+  const { name, email, message } = req.body;
+
+  const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: 'h.seok2@gmail.com',
+      pass: 'zrrqdqjeobvvtovc'
+    }
+  });
+
+  const mailOptions = {
+    from: `"Contact Form" <h.seok2@gmail.com>`,
+    to: 'jzwhire@gmail.com',
+    subject: `New Contact Message from ${name}`,
+    text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.status(200).json({ message: 'Message sent successfully!' });
+  } catch (error) {
+    console.error('Email send error:', error);
+    res.status(500).json({ message: 'There was an error sending your message.' });
+  }
+});
+
+// ✅ Your server listen stays at the very bottom
 app.listen(PORT, '0.0.0.0', () => {
   console.log(`Server running on http://0.0.0.0:${PORT}`);
 });
