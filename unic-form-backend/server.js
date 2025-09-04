@@ -59,7 +59,7 @@ app.post('/apply', upload.fields([
 
   const mailOptions = {
     from: '"UNIC Website" <h.seok2@gmail.com>',
-    to: 'jiang@ntu.edu.sg',
+    to: 'zhiwei.jiang@ntu.edu.sg',
     subject: `New Application from ${fullName}`,
     text: `Name: ${fullName}\nEmail: ${email}\nResearch Interests: ${research}`,
     attachments
@@ -90,7 +90,7 @@ app.post('/contact', express.urlencoded({ extended: true }), async (req, res) =>
 
   const mailOptions = {
     from: `"Contact Form" <h.seok2@gmail.com>`,
-    to: 'jiang@ntu.edu.sg',
+    to: 'zhiwei.jiang@ntu.edu.sg',
     subject: `New Contact Message from ${name}`,
     text: `Name: ${name}\nEmail: ${email}\nMessage:\n${message}`
   };
